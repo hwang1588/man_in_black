@@ -286,3 +286,6 @@ body {
   }
 
   .xmove6{opacity: 0;}
+
+  .cursor_target:hover{cursor : url(/img/universal.jpg) 20 30, url(/img/universal.jpg) 20 30, auto;
+  }
