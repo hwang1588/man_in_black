@@ -132,11 +132,13 @@
         <div class="text-black fs-1 text-center"></div>
       </div>
 
-      <div class="col-12 d-flex flex-center cursor_target" id="pintest3" style="height:1000px">
+      <div class="col-12 d-flex flex-center" id="pintest3" style="height:1000px">
         <div class="switch text-center text-test text-black wow fadeIn" data-wow-duration="2s">
-            <img src="img/universal.jpg" style="width: 100vw;">
-            <img src="img/glass.jpg" style="width: 400px; position: relative; top: -800px;">
-        </div>
+            <img src="img/universal.jpg" style="width: 100vw;" >
+            <a class="cursor_area">    <div class="custom-cursor"></div>
+              <!-- <img src="img/glass.jpg" style="width: 400px; position: relative; top: -800px" > -->
+        </a>
+            </div>
       </div>
 <!-- 
       <div class="col-12 bg-black d-flex flex-center" style="height: 1000px;">
@@ -179,7 +181,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <!--JQUERY:E-->
   
-  <!--cursor_reverse:S-->
+  <!--cursor_reverse:S--
   <script src="js/cursor_reverse.js"></script>
   <!--cursor_reverse:E-->
 
@@ -231,6 +233,22 @@
       $(".drama").addClass("est"); //요소에 요소를 추가함
     }, 1000); //동하기전 1000ms의 딜레이를 추가한다
   </script>
+<script>
+  $(document).ready(function() {
+    $('.cursor_area').mouseenter(function() {
+      $('.custom-cursor').css('display', 'block');
+    }).mouseleave(function() {
+      $('.custom-cursor').css('display', 'none');
+    }).mousemove(function(e) {
+      var posX = e.pageX - $(this).offset().left;
+      var posY = e.pageY - $(this).offset().top;
+      $('.custom-cursor').css({
+        top: posY,
+        left: posX
+      });
+    });
+  });
+</script>
 </body>
 
 </html>

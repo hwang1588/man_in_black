@@ -282,10 +282,33 @@ body {
   
     50% {
       border-color: black
-    }
+    } 
   }
 
   .xmove6{opacity: 0;}
 
-  .cursor_target:hover{cursor: url(/img/universal.jpg) 200 300, auto;
+  .cursor_target{
+    cursor: url(/img/target.svg), wait;
+  }
+
+.cursor_area{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: block;
+  background-color: red;
+}
+
+.cursor_area:hover{
+  cursor: none
+}
+  .custom-cursor {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    z-index:9999;
+    pointer-events: none;
   }
