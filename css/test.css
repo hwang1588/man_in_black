@@ -296,7 +296,11 @@ body {
   height: 200px;
   position: relative;
   display: block;
-  background-color: red;
+  background-color: blue;
+  position: absolute;
+  top: 500px;
+  right: 500px;
+  /* background: url('/img/glass.jpg') */
 }
 
 .cursor_area:hover{
@@ -304,11 +308,37 @@ body {
 }
   .custom-cursor {
     display: none;
-    width: 20px;
-    height: 20px;
+    background: url('/img/target.svg');
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background-color: black;
+    /* background-color: black; */
     position: absolute;
     z-index:9999;
     pointer-events: none;
   }
+
+  .bg_off{
+    width: 100%;
+    opacity: 0;
+    position: relative;
+    top: -500px;
+  }
+  
+  .bg_on{
+    animation:
+      fadein 1s forwards;
+  }
+
+
+  @keyframes fadein {
+  
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+opacity: 1;
+    } 
+  }
+

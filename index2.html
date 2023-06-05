@@ -135,9 +135,12 @@
       <div class="col-12 d-flex flex-center" id="pintest3" style="height:1000px">
         <div class="switch text-center text-test text-black wow fadeIn" data-wow-duration="2s">
             <img src="img/universal.jpg" style="width: 100vw;" >
-            <a class="cursor_area">    <div class="custom-cursor"></div>
+            <a class="cursor_area">    
+              <div class="custom-cursor"></div>
               <!-- <img src="img/glass.jpg" style="width: 400px; position: relative; top: -800px" > -->
         </a>
+        <img src="img/glass.jpg" class="bg_off">
+
             </div>
       </div>
 <!-- 
@@ -233,7 +236,7 @@
       $(".drama").addClass("est"); //요소에 요소를 추가함
     }, 1000); //동하기전 1000ms의 딜레이를 추가한다
   </script>
-<script>
+<!-- <script>
   $(document).ready(function() {
     $('.cursor_area').mouseenter(function() {
       $('.custom-cursor').css('display', 'block');
@@ -246,6 +249,29 @@
         top: posY,
         left: posX
       });
+    });
+  });
+</script> -->
+<script>
+  $(document).ready(function() {
+    var clickCount = 0;
+    
+    $('.cursor_area').mouseenter(function() {
+      $('.custom-cursor').css('display', 'block');
+    }).mouseleave(function() {
+      $('.custom-cursor').css('display', 'none');
+    }).mousemove(function(e) {
+      var posX = e.pageX - $(this).offset().left;
+      var posY = e.pageY - $(this).offset().top;
+      $('.custom-cursor').css({
+        top: posY,
+        left: posX
+      });
+    }).click(function() {
+      clickCount++;
+      if (clickCount === 10) {
+        $('.bg_off').addClass('bg_on');
+      }
     });
   });
 </script>
