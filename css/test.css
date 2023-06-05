@@ -342,3 +342,44 @@ opacity: 1;
     } 
   }
 
+* {
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.tick{
+  animation: tick 0.2s;
+}
+
+@keyframes tick {
+  
+  0% {
+    right: 495px;
+  }
+
+  50% {
+right: 500px;
+  } 
+
+  100% {
+    right: 505px;
+      } 
+}
+
+.life-bar{
+  width: 16%; height: 20px; position: absolute; top: 0px;
+}
+
+.life-bar .col{
+  background-color: green;
+  margin: 0px 1px;
+  height: 100%;
+  border-radius: 7px;
+}
+
+.hidden {
+  display: none;
+}

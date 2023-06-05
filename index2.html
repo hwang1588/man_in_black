@@ -98,24 +98,24 @@
         <div class="text-start text-test spin spin4">o</div>
       </div> -->
       <div class="col-12 d-flex flex-center" id="pintest" style="height:100vh">
-        <div class="switch text-center text-test text-black xmove">Lorem ipsum dolor sit
+        <div class="switch text-center text-test text-black xmove">Man In Black
         </div>
       </div>
 
       <div class="col-12  d-flex flex-center" style="height: 1000px; margin-top: 2000px;">
-        <div class="text-black fs-1 text-center xmove2">Lorem ipsum dolor sit amet1</div>
+        <div class="text-black fs-1 text-center xmove2">"지구를 파괴하려는 생명체가 있다"</div>
       </div>
 
-      <div class="col-12  d-flex flex-center" style="height: 1000px;">
-        <div class="text-black fs-1 text-center xmove3">Lorem ipsum dolor sit amet2</div>
+     <div class="col-12  d-flex flex-center" style="height: 1000px;">
+        <div class="text-black fs-1 text-center xmove3">"그들은 우리의 타킷이다"</div>
       </div>
 
-      <div class="col-12  d-flex flex-center" style="height: 1000px;">
+      <!--  <div class="col-12  d-flex flex-center" style="height: 1000px;">
         <div class="text-black fs-1 text-center xmove4">Lorem ipsum dolor sit amet3</div>
-      </div>
+      </div> -->
 
       <div class="col-12  d-flex flex-center" style="height: 1000px;">
-        <div class="text-black fs-1 text-center wow fadeIn" data-wow-duration="2s">Lorem ipsum dolor sit amet4<br>Lorem ipsum dolor sit amet5</div>
+        <div class="text-black fs-1 text-center wow fadeIn" data-wow-duration="2s">한가지 미션을 주겠다<br>AC8909를 처리하라</div>
       </div>
 
       <!-- <div class="col-12  d-flex flex-center" style="height: 1000px;">
@@ -135,13 +135,27 @@
       <div class="col-12 d-flex flex-center" id="pintest3" style="height:1000px">
         <div class="switch text-center text-test text-black wow fadeIn" data-wow-duration="2s">
             <img src="img/universal.jpg" style="width: 100vw;" >
+            <img src="img/glass.jpg" class="bg_off">
             <a class="cursor_area">    
               <div class="custom-cursor"></div>
               <!-- <img src="img/glass.jpg" style="width: 400px; position: relative; top: -800px" > -->
         </a>
-        <img src="img/glass.jpg" class="bg_off">
+        <ul class="row life-bar">
+          <li class="col">&nbsp;</li>
+          <li class="col">&nbsp;</li>
+          <li class="col">&nbsp;</li>
+          <li class="col">&nbsp;</li>
+          <li class="col">&nbsp;</li>
+          <li class="col">&nbsp;</li>
+          <li class="col">&nbsp;</li>
+          <li class="col">&nbsp;</li>
+        </ul>
 
             </div>
+      </div>
+
+      <div class="col-12  d-flex flex-center" style="height: 1000px;">
+        <div class="text-black fs-1 text-center xmove4">테스트 시퀀스 3</div>
       </div>
 <!-- 
       <div class="col-12 bg-black d-flex flex-center" style="height: 1000px;">
@@ -269,8 +283,36 @@
       });
     }).click(function() {
       clickCount++;
-      if (clickCount === 10) {
+      if (clickCount === 8) {
         $('.bg_off').addClass('bg_on');
+      }
+    });
+  });
+
+  $(document).ready(function() {
+    var clickCount = 0;
+
+    $('.cursor_area').click(function() {
+      clickCount++;
+      if (clickCount <= 8) {
+        $(this).addClass('tick');
+        setTimeout(function() {
+          $('.cursor_area').removeClass('tick');
+        }, 500);
+      }
+      if (clickCount === 10) {
+        // 여기에 10번째 클릭 이후에 실행되어야 할 코드를 추가하세요.
+      }
+    });
+  });
+
+  $(document).ready(function() {
+    var clickCount = 0;
+
+    $('.cursor_area').click(function() {
+      clickCount++;
+      if (clickCount <= 8) {
+        $('.life-bar li.col:not(.hidden)').first().addClass('hidden');
       }
     });
   });

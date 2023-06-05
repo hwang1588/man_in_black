@@ -25,7 +25,7 @@ gsap.to("#pintest", {
       trigger: "#pintest3", //트리거용 요소
       pin: "#pintest3", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
       start: "600 center", //요소 트리거위치, 뷰포트 트리거 위치
-      end: "+=1000", //트리거가 끝날때까지의 길이(px)
+      end: "+=100", //트리거가 끝날때까지의 길이(px)
       // markers: true,
     },
   });
@@ -97,9 +97,10 @@ gsap.to(".xmove5", {
   scrollTrigger: {
     trigger: '.xmove5',
     start: 'center center', //앞에 값은 요소 내부에 위치시킬 트리거 시작지점, 뒤에 값은 화면 자체의 트리거 시작지점
-    end: 'top top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
+    end: '5000px top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
     scrub: 1, //수치를 통해서 원복 방식의 부드러움을 가중시킬 수 있음(true 사용 가능)
            markers: true,
+           onLeave: () => $('.xmove5').addClass('d-none'),
     // onEnter: () => $('.xmove4').addClass('typewriter1-1'),
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
     // onLeave: () => $('.xmove2').removeClass('typewriter1-1'),
