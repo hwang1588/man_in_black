@@ -15,7 +15,7 @@ gsap.to("#pintest", {
     scrollTrigger: {
       trigger: "#pintest2", //트리거용 요소
       pin: "#pintest2", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
-      start: "600 center", //요소 트리거위치, 뷰포트 트리거 위치
+      start: "800 center", //요소 트리거위치, 뷰포트 트리거 위치
       end: "+=1000", //트리거가 끝날때까지의 길이(px)
       // markers: true,
     },
@@ -25,7 +25,37 @@ gsap.to("#pintest", {
       trigger: "#pintest3", //트리거용 요소
       pin: "#pintest3", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
       start: "600 center", //요소 트리거위치, 뷰포트 트리거 위치
-      end: "+=100", //트리거가 끝날때까지의 길이(px)
+      end: "+=0", //트리거가 끝날때까지의 길이(px)
+      // markers: true,
+    },
+  });
+
+  gsap.to("#pintest4", {
+    scrollTrigger: {
+      trigger: "#pintest4", //트리거용 요소
+      pin: "#pintest4", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
+      start: "center center", //요소 트리거위치, 뷰포트 트리거 위치
+      end: "+=500", //트리거가 끝날때까지의 길이(px)
+      // markers: true,
+    },
+  });
+  gsap.to(".hand_2", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "#pintest4", //트리거용 요소
+      pin: "#pintest4", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
+      start: "center center", //요소 트리거위치, 뷰포트 트리거 위치
+      end: "+=500", //트리거가 끝날때까지의 길이(px)
+      // markers: true,
+    },
+  });
+  gsap.to(".hand_3", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: "#pintest4", //트리거용 요소
+      pin: "#pintest4", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
+      start: "center center", //요소 트리거위치, 뷰포트 트리거 위치
+      end: "+=500", //트리거가 끝날때까지의 길이(px)
       // markers: true,
     },
   });
@@ -92,14 +122,15 @@ gsap.to(".xmove4", {
 });
 gsap.to(".xmove5", {
   scale: 100,
-  x: "500%",
+  y: "800%",
+  x: "800%",
   duration: 1,
   scrollTrigger: {
     trigger: '.xmove5',
-    start: 'center center', //앞에 값은 요소 내부에 위치시킬 트리거 시작지점, 뒤에 값은 화면 자체의 트리거 시작지점
-    end: '5000px top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
+    start: '400 center', //앞에 값은 요소 내부에 위치시킬 트리거 시작지점, 뒤에 값은 화면 자체의 트리거 시작지점
+    end: '2000px top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
     scrub: 1, //수치를 통해서 원복 방식의 부드러움을 가중시킬 수 있음(true 사용 가능)
-           markers: true,
+          //  markers: true,
            onLeave: () => $('.xmove5').addClass('d-none'),
     // onEnter: () => $('.xmove4').addClass('typewriter1-1'),
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
@@ -118,6 +149,26 @@ gsap.to(".xmove6", {
     scrub: 1, //수치를 통해서 원복 방식의 부드러움을 가중시킬 수 있음(true 사용 가능)
     //        markers: true,
     // onEnter: () => $('.xmove4').addClass('typewriter1-1'),
+    //뷰포트에 xmove가 나타날 경우 특정요소를 추가
+    // onLeave: () => $('.xmove2').removeClass('typewriter1-1'),
+    //뷰포트에 xmove가 사라질 경우 특정요소를 삭제
+  },
+});
+
+gsap.to(".xmove7", {
+  scrollTrigger: {
+    trigger: '.xmove7',
+    start: 'top bottom', //앞에 값은 요소 내부에 위치시킬 트리거 시작지점, 뒤에 값은 화면 자체의 트리거 시작지점
+    end: 'top top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
+           markers: true,
+    onEnter: () => {
+      $('#my-video')[0].play();
+      setTimeout(function() {
+        $('body').empty();
+        $('body').append( '<div class="end-title opacity-0">END</div>' );
+        $('.opacity-0').addClass('bg_on').removeClass('opacity-0');
+      }, 7500);
+    },
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
     // onLeave: () => $('.xmove2').removeClass('typewriter1-1'),
     //뷰포트에 xmove가 사라질 경우 특정요소를 삭제

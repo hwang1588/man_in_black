@@ -46,9 +46,7 @@
   </script>
   <!--css:S-->
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
   <!--css:E-->
-
 </head>
 <!--인트로 진입 로딩이미지::S-->
 <div id="loading-wrapper2">
@@ -78,7 +76,7 @@
 
 <body class="position-fixed">
     <!--container:s-->
-  <div class="container-fluid px-0" style="min-height: 4000px">
+  <div class="container-fluid px-0" style="min-height: 4000px" id="clearall">
 
     <div class="row">
       <!-- <div class="col-12 d-flex flex-center" id="pintest" style="height: 100vh">
@@ -122,9 +120,9 @@
         <div id="id" class="text-black fs-1 text-center">idididididid</div>
       </div> -->
       
-      <div class="col-12 d-flex flex-center" id="pintest2" style="height:1000px">
+      <div class="col-12 d-flex flex-center" id="pintest2" style="height:2000px">
         <div class="switch text-center text-test text-black xmove5">
-            <img src="img/sunglass.png" style="width: 100%;">
+            <img src="img/sunglass.png" style="width: 50%;">
         </div>
       </div>
             <!-- 검정 화면 시퀀스 -->
@@ -134,13 +132,13 @@
 
       <div class="col-12 d-flex flex-center" id="pintest3" style="height:1000px">
         <div class="switch text-center text-test text-black wow fadeIn" data-wow-duration="2s">
-            <img src="img/universal.jpg" style="width: 100vw;" >
-            <img src="img/glass.jpg" class="bg_off">
+            <img src="img/universe.jpg" style="width: 100vw;" class="universe_ready">
+            <div class="bg-black bg_off text-white win_text">WIN</div>
             <a class="cursor_area">    
               <div class="custom-cursor"></div>
               <!-- <img src="img/glass.jpg" style="width: 400px; position: relative; top: -800px" > -->
         </a>
-        <ul class="row life-bar">
+        <ul class="row life-bar">남은체력: 
           <li class="col">&nbsp;</li>
           <li class="col">&nbsp;</li>
           <li class="col">&nbsp;</li>
@@ -154,9 +152,20 @@
             </div>
       </div>
 
-      <div class="col-12  d-flex flex-center" style="height: 1000px;">
-        <div class="text-black fs-1 text-center xmove4">테스트 시퀀스 3</div>
+      <div class="col-12  d-flex flex-center" id="pintest4" style="height: 1000px;">
+        <img src="img/hand_bg.png" style="width: 100%;" class="hand_img hand_1">
+        <img src="img/hand_light1.png" style="width: 100%;" class="hand_img hand_2">
+        <img src="img/hand_light2.png" style="width: 100%;" class="hand_img hand_3">
+
       </div>
+
+      <div class="col-12 bg-black text-white d-flex flex-center" style="flex-direction:column; font-size: 90px; height: 4000px;">
+        <p class="wow fadeIn" data-wow-duration="2s" style="margin-top: 1000px;">You Are Man In Black</p>
+        <div style="margin-top: 1000px;" class="xmove7 wow fadeIn">
+          <video id="my-video" src="img/main_in_black.MP4" style="width: 100%;"></video>
+        </div>
+      </div>
+
 <!-- 
       <div class="col-12 bg-black d-flex flex-center" style="height: 1000px;">
         <div class="text-black fs-1 text-center">idididididid</div>
@@ -314,6 +323,17 @@
       if (clickCount <= 8) {
         $('.life-bar li.col:not(.hidden)').first().addClass('hidden');
       }
+      if (clickCount === 3) {
+      $('.life-bar li.col:not(.hidden)').css('background-color', 'orange');
+    }
+      if (clickCount === 5) {
+      $('.life-bar li.col:not(.hidden)').css('background-color', 'red');
+    }
+    if (clickCount === 8) {
+      $('.cursor_area').addClass('bg_fadeout');
+      $('.universe_ready').addClass('bg_fadeout');
+      $('.life-bar').addClass('d-none');
+    }
     });
   });
 </script>
