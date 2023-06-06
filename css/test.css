@@ -288,7 +288,7 @@ body {
   .xmove6{opacity: 0;}
 
   .cursor_target{
-    cursor: url(/img/target.svg), wait;
+    cursor: url(../img/target.svg), wait;
   }
 
 .cursor_area{
@@ -300,7 +300,7 @@ body {
   position: absolute;
   top: 150px;
   right: 500px;
-  background: url('/img/stranger.png') no-repeat;
+  background: url('../img/stranger.png') no-repeat;
   background-size: 800px;
 }
 
@@ -309,7 +309,7 @@ body {
 }
   .custom-cursor {
     display: none;
-    background: url('/img/target.svg');
+    background: url('../img/target.svg');
     width: 30px;
     height: 30px;
     border-radius: 50%;

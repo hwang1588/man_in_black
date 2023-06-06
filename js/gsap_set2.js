@@ -160,7 +160,7 @@ gsap.to(".xmove7", {
     trigger: '.xmove7',
     start: 'top bottom', //앞에 값은 요소 내부에 위치시킬 트리거 시작지점, 뒤에 값은 화면 자체의 트리거 시작지점
     end: 'top top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
-           markers: true,
+          //  markers: true,
     onEnter: () => {
       $('#my-video')[0].play();
       setTimeout(function() {
