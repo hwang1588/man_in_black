@@ -491,4 +491,4 @@ opacity: 0;
   animation-delay: 0s;
 }
 
-.btn_sound{background-color: white; border: 1px solid black; color:black; width: 100px; height: 30px; font-size: 12px; position: absolute; top: 100px; right: 100px;}
+.btn_sound{z-index:9999; background-color: white; border: 1px solid black; color:black; width: 100px; height: 30px; font-size: 12px; position: absolute; top: 100px; right: 100px;}

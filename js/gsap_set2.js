@@ -95,7 +95,7 @@ gsap.to(".xmove2", {
     start: 'center bottom', //앞에 값은 요소 내부에 위치시킬 트리거 시작지점, 뒤에 값은 화면 자체의 트리거 시작지점
     end: 'top top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
     scrub: 1, //수치를 통해서 원복 방식의 부드러움을 가중시킬 수 있음(true 사용 가능)
-           markers: true,
+          //  markers: true,
     onEnter: () => {
     $('.xmove2').addClass('typewriter1-0')
     $('#typing')[0].play();
