@@ -1,4 +1,7 @@
 
+$(window).on('load', function() {
+  $('.bgm').get(0).play();
+});
 ///////////////////////////////////////////////////
 //timeline.to 에서 to를 통해 해당 요소에 명령 입력
 ///////////////////////////////////////////////////
@@ -86,7 +89,13 @@ gsap.to(".xmove2", {
     end: 'top top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
     scrub: 1, //수치를 통해서 원복 방식의 부드러움을 가중시킬 수 있음(true 사용 가능)
     //        markers: true,
-    onEnter: () => $('.xmove2').addClass('typewriter1-1'),
+    onEnter: () => {
+    $('.xmove2').addClass('typewriter1-0')
+    $('.typing')[0].play();
+  },
+  onLeave: () => {
+    $('.typing')[0].pause();
+  },
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
     // onLeave: () => $('.xmove2').removeClass('typewriter1-1'),
     //뷰포트에 xmove가 사라질 경우 특정요소를 삭제
@@ -100,7 +109,13 @@ gsap.to(".xmove3", {
     end: 'top top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
     scrub: 1, //수치를 통해서 원복 방식의 부드러움을 가중시킬 수 있음(true 사용 가능)
     //        markers: true,
-    onEnter: () => $('.xmove3').addClass('typewriter1-1'),
+    onEnter: () => {
+      $('.xmove3').addClass('typewriter1-1')
+      $('.typing')[0].play();
+    },
+    onLeave: () => {
+      $('.typing')[0].pause();
+    },
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
     // onLeave: () => $('.xmove2').removeClass('typewriter1-1'),
     //뷰포트에 xmove가 사라질 경우 특정요소를 삭제
@@ -163,6 +178,7 @@ gsap.to(".xmove7", {
           //  markers: true,
     onEnter: () => {
       $('#my-video')[0].play();
+      $('.bgm')[0].pause();
       setTimeout(function() {
         $('body').empty();
         $('body').append( '<div class="end-title opacity-0">END</div>' );

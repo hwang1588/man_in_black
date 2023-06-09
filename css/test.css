@@ -239,6 +239,26 @@ body {
     margin-top: 90px;
   }
 
+  .typewriter1-0 {
+    /*	border-right: 0.001rem solid;*/
+    text-align: start;
+    color: #222222;
+    /*  font-family: monospace;*/
+    font-size: 2.34vw;
+    /* font-weight: 600; */
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    /*border-right: .15em solid orange;  The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    /* Gives that scrolling effect as the typing happens */
+    /* letter-spacing: .15em; */
+    /* Adjust as needed */
+    animation:
+      typing0 3s steps(40, end),
+      blink-caret .4s step-end infinite;
+  }
+
   .typewriter1-1 {
     /*	border-right: 0.001rem solid;*/
     text-align: start;
@@ -257,10 +277,20 @@ body {
     animation:
       typing 3s steps(40, end),
       blink-caret .4s step-end infinite;
-      
   }
   
   /* The typing effect */
+  @keyframes typing0 {
+    from {
+      width:0;
+      border-right: 0.01em solid
+    }
+  
+    to {
+      width: 80%;
+    }
+  }
+
   @keyframes typing {
     from {
       width:0;

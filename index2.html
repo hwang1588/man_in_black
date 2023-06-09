@@ -74,10 +74,10 @@
 </div>
 <!--인트로 진입 로딩이미지::E-->
 
+<!-- <video class="bgm" src="img/bgm.mp4" style="width: 0%; height: 0%; position: absolute;"></video> -->
 <body class="position-fixed">
     <!--container:s-->
   <div class="container-fluid px-0" style="min-height: 4000px" id="clearall">
-
     <div class="row">
       <!-- <div class="col-12 d-flex flex-center" id="pintest" style="height: 100vh">
         <div class="asdf">
@@ -100,12 +100,14 @@
         </div>
       </div>
 
+      <video class="typing" src="img/typing.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+
       <div class="col-12  d-flex flex-center" style="height: 1000px; margin-top: 2000px;">
-        <div class="text-black fs-1 text-center xmove2">"There are creatures that want to destroy the Earth"</div>
+        <div class="text-black fs-1 text-center xmove2 typing">"There are creatures that want to destroy the Earth"</div>
       </div>
 
      <div class="col-12  d-flex flex-center" style="height: 1000px;">
-        <div class="text-black fs-1 text-center xmove3">"They are our targets"</div>
+        <div class="text-black fs-1 text-center xmove3 typing">"They are our targets"</div>
       </div>
 
       <!--  <div class="col-12  d-flex flex-center" style="height: 1000px;">
@@ -129,6 +131,7 @@
       <div class="col-12 bg-black d-flex flex-center" style="height: 1000px;">
         <div class="text-black fs-1 text-center"></div>
       </div>
+<video class="gun" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
 
       <div class="col-12 d-flex flex-center" id="pintest3" style="height:1000px">
         <div class="switch text-center text-test text-black wow fadeIn" data-wow-duration="2s">
@@ -322,6 +325,7 @@
       clickCount++;
       if (clickCount <= 8) {
         $('.life-bar li.col:not(.hidden)').first().addClass('hidden');
+        $('.gun').get(0).play();
       }
       if (clickCount === 3) {
       $('.life-bar li.col:not(.hidden)').css('background-color', 'orange');
@@ -336,7 +340,9 @@
     }
     });
   });
+  
 </script>
+
 </body>
 
 </html>
