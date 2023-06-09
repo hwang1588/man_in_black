@@ -87,8 +87,8 @@
         <div class="text-start text-test spin spin3">o</div>
         <div class="text-start text-test spin spin4">o</div>
       </div> -->
-      <button class="btn_sound">Sound On</button>
       <div class="col-12 d-flex flex-center" id="pintest" style="height:100vh">
+        <button class="btn_sound">Sound On</button>
 
         <div class="switch text-center text-test text-black xmove">Man In Black
         </div>
@@ -96,7 +96,11 @@
 
       <video id="bgm" src="img/bgm.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
 
-      <video id="typing" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video id="typing1" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video id="typing2" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video id="typing3" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video id="typing4" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+
 
 
 
@@ -134,7 +138,15 @@
       <div class="col-12 bg-black d-flex flex-center" style="height: 1000px;">
         <div class="text-black fs-1 text-center"></div>
       </div>
-      <video class="gun" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video class="gun1" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video class="gun2" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video class="gun3" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video class="gun4" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video class="gun5" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video class="gun6" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video class="gun7" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video class="gun8" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+
       <video class="win_sound" src="img/win.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
 
       <div class="col-12 d-flex flex-center bg-black" id="pintest3" style="height:1000px">
@@ -159,10 +171,11 @@
         </div>
       </div>
 
-      <video class="hand_sound" src="img/hand.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
-      <div class="" style="background-color: black;">
-        <div class="col-12  d-flex flex-center" id="pintest4"
-          style="margin-top: 1000px; background-color: black; height: 1000px;">
+      <div class="" style="padding-top: 1000px; background-color: black;">
+        <div class="col-12  d-flex flex-center"  id="pintest4"
+          style="background-color: black; height: 1000px;">
+          <video id="hand_sound" src="img/hand.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+
           <img src="img/hand_bg.png" style="width: 100%;" class="hand_img hand_1">
           <img src="img/hand_light1.png" style="width: 100%;" class="hand_img hand_2">
           <img src="img/hand_light2.png" style="width: 100%;" class="hand_img hand_3">
@@ -296,9 +309,9 @@
     $(document).ready(function () {
 
       $('.btn_sound').click(function () {
-      $('#bgm').get(0).play();
-      $('.btn_sound').addClass('d-none');
-    });
+        $('#bgm').get(0).play();
+        $('.btn_sound').addClass('d-none');
+      });
 
       var clickCount = 0;
 
@@ -346,15 +359,32 @@
         clickCount++;
         if (clickCount <= 8) {
           $('.life-bar li.col:not(.hidden)').first().addClass('hidden');
-          $('.gun').get(0).play();
+        }
+        if (clickCount === 1) {
+          $('.gun1').get(0).play();
+        }
+        if (clickCount === 2) {
+          $('.gun2').get(0).play();
         }
         if (clickCount === 3) {
+          $('.gun3').get(0).play();
           $('.life-bar li.col:not(.hidden)').css('background-color', 'orange');
         }
+        if (clickCount === 4) {
+          $('.gun4').get(0).play();
+        }
         if (clickCount === 5) {
+          $('.gun5').get(0).play();
           $('.life-bar li.col:not(.hidden)').css('background-color', 'red');
         }
+        if (clickCount === 6) {
+          $('.gun6').get(0).play();
+        }
+        if (clickCount === 7) {
+          $('.gun7').get(0).play();
+        }
         if (clickCount === 8) {
+          $('.gun8').get(0).play();
           $('.cursor_area').addClass('bg_fadeout');
           $('.universe_ready').addClass('bg_fadeout');
           $('.life-bar').addClass('d-none');

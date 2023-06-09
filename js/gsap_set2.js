@@ -36,33 +36,33 @@ gsap.to("#pintest", {
       trigger: "#pintest4", //트리거용 요소
       pin: "#pintest4", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
       start: "center center", //요소 트리거위치, 뷰포트 트리거 위치
-      end: "+=500", //트리거가 끝날때까지의 길이(px)
-      // markers: true,
+      end: "+=8000", //트리거가 끝날때까지의 길이(px)
+      markers: true,
       onEnter: () => {
-        $('.hand_sound')[0].play();
+        $('#hand_sound')[0].play();
       },  
-      onLeave: () => {
-        $('.hand_sound')[0].pause();
-      },  
+      
     },
   });
   gsap.to(".hand_2", {
+    duration: 5,
     opacity: 1,
     scrollTrigger: {
       trigger: "pintest4", //트리거용 요소
-      pin: "#pintest4", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
+      pin: ".hand_2", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
       start: "center center", //요소 트리거위치, 뷰포트 트리거 위치
-      end: "+=500", //트리거가 끝날때까지의 길이(px)
+      end: "+=0", //트리거가 끝날때까지의 길이(px)
         
     },
   });
   gsap.to(".hand_3", {
+    duration: 5,
     opacity: 1,
     scrollTrigger: {
       trigger: "#pintest4", //트리거용 요소
-      pin: "#pintest4", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
+      pin: ".hand_3", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
       start: "center center", //요소 트리거위치, 뷰포트 트리거 위치
-      end: "+=500", //트리거가 끝날때까지의 길이(px)
+      end: "+=0", //트리거가 끝날때까지의 길이(px)
       // markers: true,
     },
   });
@@ -98,10 +98,10 @@ gsap.to(".xmove2", {
           //  markers: true,
     onEnter: () => {
     $('.xmove2').addClass('typewriter1-0')
-    $('#typing')[0].play();
+    $('#typing1')[0].play();
   },
   onLeave: () => {
-    $('#typing')[0].pause();
+    $('#typing1')[0].pause();
   },
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
     // onLeave: () => $('.xmove2').removeClass('typewriter1-1'),
@@ -118,10 +118,10 @@ gsap.to(".xmove3", {
     //        markers: true,
     onEnter: () => {
       $('.xmove3').addClass('typewriter1-1')
-      $('#typing')[0].play();
+      $('#typing2')[0].play();
     },
     onLeave: () => {
-      $('#typing')[0].pause();
+      $('#typing2')[0].pause();
     },
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
     // onLeave: () => $('.xmove2').removeClass('typewriter1-1'),
@@ -138,10 +138,10 @@ gsap.to(".xmove4", {
     //        markers: true,
     onEnter: () => {
       $('.xmove4').addClass('typewriter1-1')
-      $('#typing')[0].play();
+      $('#typing3')[0].play();
     },
     onLeave: () => {
-      $('#typing')[0].pause();
+      $('#typing3')[0].pause();
     },
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
     // onLeave: () => $('.xmove2').removeClass('typewriter1-1'),
@@ -158,11 +158,14 @@ gsap.to(".xmove4-2", {
     //        markers: true,
     onEnter: () => {
       $('.xmove4-2').addClass('typewriter1-1')
-      $('#typing')[0].play();
+      $('#typing4')[0].play();
     },
     onLeave: () => {
-      $('#typing')[0].pause();
+      $('#typing4')[0].pause();
     },
+    // onLeave: () => {
+    //   $('#typing')[0].pause();
+    // },
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
     // onLeave: () => $('.xmove2').removeClass('typewriter1-1'),
     //뷰포트에 xmove가 사라질 경우 특정요소를 삭제
@@ -210,12 +213,13 @@ gsap.to(".xmove7", {
     end: 'top top', //앞에 값은 요소 내부에 위치시킬 트리거 종료지점, 뒤에 값은 화면 자체의 트리거 종료지점
           //  markers: true,
     onEnter: () => {
+      $('#hand_sound')[0].pause();
       $('#my-video')[0].play();
       // $('.bgm')[0].pause();
       setTimeout(function() {
         $('body').empty();
         $('body').append( '<div class="end-title opacity-0">END</div>' );
-        $('.opacity-0').addClass('bg_on').removeClass('opacity-0');
+        $('.opacity-0').addClass('bg_on').removeCla1ss('opacity-0');
       }, 7500);
     },
     //뷰포트에 xmove가 나타날 경우 특정요소를 추가
