@@ -21,14 +21,7 @@
   <meta name="keyword" content="Myce.io">
   <meta name="og:keyword" content="Myce.io">
   <title>Man in black-p2</title>
-  <script>
-    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-      window.location = 'microsoft-edge:' + window.location;
-      setTimeout(function() {
-        window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
-      }, 1);
-    }
-  </script>
+  
    <!-- <script>
     function isMobile() {
       var UserAgent = navigator.userAgent;
@@ -74,7 +67,6 @@
 </div>
 <!--인트로 진입 로딩이미지::E-->
 
-<video class="bgm" src="img/bgm.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
 <body class="position-fixed">
     <!--container:s-->
   <div class="container-fluid px-0" style="min-height: 4000px" id="clearall">
@@ -95,32 +87,44 @@
         <div class="text-start text-test spin spin3">o</div>
         <div class="text-start text-test spin spin4">o</div>
       </div> -->
+      <!-- <video class="bgm" src="img/bgm.MP4" style="width: 0%; height: 0%; position: absolute;"></video> -->
+
       <div class="col-12 d-flex flex-center" id="pintest" style="height:100vh">
+        <button class="btn_sound" >Sound On</button>
         <div class="switch text-center text-test text-black xmove">Man In Black
         </div>
       </div>
 
-      <video class="typing" src="img/typing.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <!-- <video class="bgm"  style="width: 0%; height: 0%; position: absolute;"></video> -->
+
+      <video id="typing" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+
+
 
       <div class="col-12  d-flex flex-center" style="height: 1000px; margin-top: 2000px;">
-        <div class="text-black fs-1 text-center xmove2 typing">"There are creatures that want to destroy the Earth"</div>
+        <div class="text-black fs-1 text-center xmove2">"There are creatures that want to destroy the Earth"
+        </div>
       </div>
 
      <div class="col-12  d-flex flex-center" style="height: 1000px;">
-        <div class="text-black fs-1 text-center xmove3 typing">"They are our targets"</div>
+        <div class="text-black fs-1 text-center xmove3">"They are our targets"
+        </div>
       </div>
 
-      <!--  <div class="col-12  d-flex flex-center" style="height: 1000px;">
-        <div class="text-black fs-1 text-center xmove4">Lorem ipsum dolor sit amet3</div>
-      </div> -->
 
-      <div class="col-12  d-flex flex-center" style="height: 1000px;">
-        <div class="text-black fs-1 text-center wow fadeIn" data-wow-duration="2s">"I'll give you a mission"<br><br>"Get rid of AC8909"</div>
-      </div>
 
       <!-- <div class="col-12  d-flex flex-center" style="height: 1000px;">
-        <div id="id" class="text-black fs-1 text-center">idididididid</div>
+        <div class="text-black fs-1 text-center wow fadeIn" data-wow-duration="2s">"I'll give you a mission"<br><br>"Get rid of AC8909"</div>
       </div> -->
+
+
+      <div class="col-12  d-flex flex-center" style="height: 1000px;">
+        <div class="text-black fs-1 text-center xmove4">"I'll give you a mission"</div>
+      </div>
+
+      <div class="col-12  d-flex flex-center" style="height: 1000px;">
+        <div class="text-black fs-1 text-center xmove4-2">"Get rid of AC8909"</div>
+      </div>
       
       <div class="col-12 d-flex flex-center" id="pintest2" style="height:2000px">
         <div class="switch text-center text-test text-black xmove5">
@@ -132,8 +136,9 @@
         <div class="text-black fs-1 text-center"></div>
       </div>
 <video class="gun" src="img/gun.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+<video class="win_sound" src="img/win.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
 
-      <div class="col-12 d-flex flex-center" id="pintest3" style="height:1000px">
+      <div class="col-12 d-flex flex-center bg-black" id="pintest3" style="height:1000px">
         <div class="switch text-center text-test text-black wow fadeIn" data-wow-duration="2s">
             <img src="img/universe.jpg" style="width: 100vw;" class="universe_ready">
             <div class="bg-black bg_off text-white win_text">WIN</div>
@@ -154,15 +159,17 @@
 
             </div>
       </div>
-
-      <div class="col-12  d-flex flex-center" id="pintest4" style="height: 1000px;">
+      
+      <video class="hand_sound" src="img/hand.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+<div class="" style="background-color: black;">
+      <div class="col-12  d-flex flex-center" id="pintest4" style="margin-top: 1000px; background-color: black; height: 1000px;">
         <img src="img/hand_bg.png" style="width: 100%;" class="hand_img hand_1">
         <img src="img/hand_light1.png" style="width: 100%;" class="hand_img hand_2">
         <img src="img/hand_light2.png" style="width: 100%;" class="hand_img hand_3">
-
       </div>
+    </div>
 
-      <div class="col-12 bg-black text-white d-flex flex-center" style="flex-direction:column; font-size: 90px; height: 4000px;">
+      <div class="col-12 bg-black text-white d-flex flex-center" style="padding-top: 1000px; flex-direction:column; font-size: 90px; height: 4000px;">
         <p class="wow fadeIn" data-wow-duration="2s" style="margin-top: 1000px;">You Are Man In Black</p>
         <div style="margin-top: 1000px;" class="xmove7 wow fadeIn">
           <video id="my-video" src="img/main_in_black.MP4" style="width: 100%;"></video>
@@ -248,6 +255,11 @@
   <!--WOW.JS:E-->
 
   <script>
+$('.btn_sound').click(function() {
+  $('.bgm').get(0).play();
+  $('.btn_sound').addClass('d-none');
+});
+
     //로딩화면용
     window.setTimeout(function() {
       $("#loading-wrapper2").fadeOut(800); //요소를 1000ms동안 fadeout으로 안보이게함
@@ -279,7 +291,8 @@
   });
 </script> -->
 <script>
-  $(document).ready(function() {
+  $(document).ready(function() 
+  {
     var clickCount = 0;
     
     $('.cursor_area').mouseenter(function() {
@@ -297,6 +310,7 @@
       clickCount++;
       if (clickCount === 8) {
         $('.bg_off').addClass('bg_on');
+        $('.win_sound').get(0).play();
       }
     });
   });
@@ -313,7 +327,7 @@
         }, 500);
       }
       if (clickCount === 10) {
-        // 여기에 10번째 클릭 이후에 실행되어야 할 코드를 추가하세요.
+        //10번째 클릭 이후에 실행되어야 할 코드
       }
     });
   });
