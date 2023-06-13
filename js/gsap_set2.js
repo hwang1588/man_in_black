@@ -21,23 +21,29 @@ gsap.to("#pintest", {
       // markers: true,
     },
   });
+
+
+
+
   gsap.to("#pintest3", {
     scrollTrigger: {
       trigger: "#pintest3", //트리거용 요소
       pin: "#pintest3", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
       start: "600 center", //요소 트리거위치, 뷰포트 트리거 위치
       end: "+=0", //트리거가 끝날때까지의 길이(px)
-      // markers: true,
+      markers: true,
+      
     },
   });
+
 
   gsap.to("#pintest4", {
     scrollTrigger: {
       trigger: "#pintest4", //트리거용 요소
       pin: "#pintest4", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
       start: "center center", //요소 트리거위치, 뷰포트 트리거 위치
-      end: "+=8000", //트리거가 끝날때까지의 길이(px)
-      markers: true,
+      end: "+=6000", //트리거가 끝날때까지의 길이(px)
+      // markers: true,
       onEnter: () => {
         $('#hand_sound')[0].play();
       },  

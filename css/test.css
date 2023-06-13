@@ -326,13 +326,24 @@ body {
   height: 800px;
   position: relative;
   display: block;
-  background-color: blue;
+  background-color: black;
   position: absolute;
   top: 150px;
   right: 500px;
-  background: url('../img/stranger.png') no-repeat;
+  /* background: url('../img/stranger.png') no-repeat; */
   background-size: 800px;
+  animation: fadeinout 3s infinite;
 }
+
+@keyframes fadeinout {
+  0%, 100% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+}
+
 
 .cursor_area:hover{
   cursor: none
@@ -385,21 +396,21 @@ opacity: 1;
 }
 
 .tick{
-  animation: tick 0.2s;
+  animation: tick 0.3s;
 }
 
 @keyframes tick {
   
   0% {
-    right: 495px;
+    margin-right: 5px;
   }
 
   50% {
-right: 500px;
-  } 
+    margin-right: 0px;
+  }
 
   100% {
-    right: 505px;
+    margin-right: -5px;
       } 
 }
 

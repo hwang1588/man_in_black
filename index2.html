@@ -154,7 +154,8 @@
           <img src="img/universe.jpg" style="width: 100vw;" class="universe_ready">
           <div class="bg-black bg_off text-white win_text">WIN</div>
           <a class="cursor_area">
-            <div class="custom-cursor"></div>
+            <div class="custom-cursor">
+              </div>
             <!-- <img src="img/glass.jpg" style="width: 400px; position: relative; top: -800px" > -->
           </a>
           <ul class="row life-bar">남은체력:
@@ -391,6 +392,26 @@
         }
       });
     });
+
+  
+    $(document).ready(function() {
+  var clickedInside = false;
+  var popupShown = false;
+
+  $('#pintest3').on('click', function() {
+    clickedInside = true;
+  });
+
+  $(document).on('mouseleave', '#pintest3', function() {
+    if (!clickedInside && !popupShown) {
+      // 팝업 얼럿을 띄우는 코드 작성
+      alert("Life Bar 영역을 벗어났습니다!");
+      popupShown = true;
+    }
+  });
+});
+
+
 
   </script>
 
