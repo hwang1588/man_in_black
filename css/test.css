@@ -337,10 +337,10 @@ body {
 
 @keyframes fadeinout {
   0%, 100% {
-    transform: translateX(-100px);
+    transform: translateX(-150px);
   }
   50% {
-    transform: translateX(100px);
+    transform: translateX(150px);
   }
 }
 
