@@ -47,9 +47,18 @@ gsap.to("#pintest", {
       onEnter: () => {
         $('#hand_sound')[0].play();
       },  
-      
     },
   });
+
+  // var soundPlayed = false;
+
+  // $('#pintest4').one('mouseenter', function() {
+  //   if (!soundPlayed) {
+  //     $('#hand_sound')[0].play();
+  //     soundPlayed = true;
+  //   }
+
+
   gsap.to(".hand_2", {
     duration: 5,
     opacity: 1,

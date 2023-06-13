@@ -96,10 +96,10 @@
 
       <video id="bgm" src="img/bgm.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
 
-      <video id="typing1" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
-      <video id="typing2" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
-      <video id="typing3" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
-      <video id="typing4" src="img/typing.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video id="typing1" src="img/typing.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video id="typing2" src="img/typing.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video id="typing3" src="img/typing.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
+      <video id="typing4" src="img/typing.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
 
 
 
@@ -175,7 +175,7 @@
       <div class="" style="padding-top: 1000px; background-color: black;">
         <div class="col-12  d-flex flex-center"  id="pintest4"
           style="background-color: black; height: 1000px;">
-          <video id="hand_sound" src="img/hand.MP4" style="width: 0%; height: 0%; position: absolute;"></video>
+          <video id="hand_sound" src="img/hand.mp4" style="width: 0%; height: 0%; position: absolute;"></video>
 
           <img src="img/hand_bg.png" style="width: 100%;" class="hand_img hand_1">
           <img src="img/hand_light1.png" style="width: 100%;" class="hand_img hand_2">
@@ -342,9 +342,9 @@
       $('.cursor_area').click(function () {
         clickCount++;
         if (clickCount <= 8) {
-          $(this).addClass('tick');
+          $('.custom-cursor').addClass('tick');
           setTimeout(function () {
-            $('.cursor_area').removeClass('tick');
+            $('.custom-cursor').removeClass('tick');
           }, 500);
         }
         if (clickCount === 10) {
@@ -352,6 +352,25 @@
         }
       });
     });
+
+
+    // 외계인 영역에 흔들림 효과 추가
+    // $(document).ready(function () {
+    //   var clickCount = 0;
+
+    //   $('.cursor_area').click(function () {
+    //     clickCount++;
+    //     if (clickCount <= 8) {
+    //       $(this).addClass('tick');
+    //       setTimeout(function () {
+    //         $('.cursor_area').removeClass('tick');
+    //       }, 500);
+    //     }
+    //     if (clickCount === 10) {
+    //       //10번째 클릭 이후에 실행되어야 할 코드
+    //     }
+    //   });
+    // });
 
     $(document).ready(function () {
       var clickCount = 0;
@@ -405,7 +424,7 @@
   $(document).on('mouseleave', '#pintest3', function() {
     if (!clickedInside && !popupShown) {
       // 팝업 얼럿을 띄우는 코드 작성
-      alert("Life Bar 영역을 벗어났습니다!");
+      alert("게임영역을 벗어났습니다");
       popupShown = true;
     }
   });
