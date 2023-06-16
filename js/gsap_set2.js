@@ -31,7 +31,7 @@ gsap.to("#pintest", {
       pin: "#pintest3", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
       start: "600 center", //요소 트리거위치, 뷰포트 트리거 위치
       end: "+=0", //트리거가 끝날때까지의 길이(px)
-      markers: true,
+      // markers: true,
       
     },
   });
