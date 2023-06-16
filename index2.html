@@ -153,11 +153,20 @@
         <div class="switch text-center text-test text-black wow fadeIn" data-wow-duration="2s">
           <img src="img/universe.jpg" style="width: 100vw;" class="universe_ready">
           <div class="bg-black bg_off text-white win_text">WIN</div>
+          
+          <div class="test_area" style="    width: 47%;
+          display: block;
+          position: absolute;
+          top: 0;
+          height: 100%;
+          left: 500px;">
+          <div class="custom-cursor">
+          </div>
           <a class="cursor_area">
-            <div class="custom-cursor">
-              </div>
-            <!-- <img src="img/glass.jpg" style="width: 400px; position: relative; top: -800px" > -->
+            
           </a>
+        </div>
+
           <ul class="row life-bar">남은체력:
             <li class="col">&nbsp;</li>
             <li class="col">&nbsp;</li>
@@ -316,7 +325,7 @@
 
       var clickCount = 0;
 
-      $('.cursor_area').mouseenter(function () {
+      $('.test_area').mouseenter(function () {
         $('.custom-cursor').css('display', 'block');
       }).mouseleave(function () {
         $('.custom-cursor').css('display', 'none');
@@ -335,6 +344,30 @@
         }
       });
     });
+
+    // $('.cursor_area').mouseenter(function () {
+    //     $('.custom-cursor').css('display', 'block');
+    //   }).mouseleave(function () {
+    //     $('.custom-cursor').css('display', 'none');
+    //   }).click(function () {
+    //     clickCount++;
+    //     if (clickCount === 8) {
+    //       $('.bg_off').addClass('bg_on');
+    //       $('.win_sound').get(0).play();
+    //     }
+    //   });
+    // });
+
+    // $('.test_area').mouseenter(function () {
+    //   $('.custom-cursor').mousemove(function (e) {
+    //     var posX = e.pageX - $(this).offset().left;
+    //     var posY = e.pageY - $(this).offset().top;
+    //     $('.custom-cursor').css({
+    //       top: posY,
+    //       left: posX
+    //     });
+    //   })
+    // });
 
     $(document).ready(function () {
       var clickCount = 0;
@@ -406,6 +439,7 @@
         if (clickCount === 8) {
           $('.gun8').get(0).play();
           $('.cursor_area').addClass('bg_fadeout');
+          $('.test_area').addClass('bg_fadeout');
           $('.universe_ready').addClass('bg_fadeout');
           $('.life-bar').addClass('d-none');
         }
